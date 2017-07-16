@@ -8,7 +8,7 @@ from mne.minimum_norm import (make_inverse_operator, apply_inverse,
 # accessing datasets
 from mne.datasets import sample
 data_path = sample.data_path()
-raw_fname = data_path + '\MEG\sample\sample_audvis_filt-0-40_raw.fif'
+raw_fname = data_path + '/MEG/sample/sample_audvis_filt-0-40_raw.fif'
 os.environ["SUBJECTS_DIR"] = data_path + '/subjects'
 raw = mne.io.read_raw_fif(raw_fname, preload=True)
 raw.plot(duration=3, start=100)
